@@ -6,7 +6,11 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class AmazonSpiderPipeline(object):
+class ProductDetailPipeline(object):
     def process_item(self, item, spider):
-        print 123
         print item
+
+
+class ProductPricePipeline(object):
+    def process_item(self, item, spider):
+        print '1111:%s' % item

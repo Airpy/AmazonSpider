@@ -16,10 +16,10 @@ NEWSPIDER_MODULE = 'AmazonSpider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'AmazonSpider (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -65,7 +65,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'AmazonSpider.pipelines.AmazonSpiderPipeline': 300,
+   'AmazonSpider.pipelines.ProductDetailPipeline': 300,
+   'AmazonSpider.pipelines.ProductPricePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

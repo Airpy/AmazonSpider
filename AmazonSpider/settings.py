@@ -66,7 +66,6 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'AmazonSpider.pipelines.ProductDetailPipeline': 300,
-   'AmazonSpider.pipelines.ProductPricePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

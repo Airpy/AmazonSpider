@@ -9,8 +9,3 @@
 class ProductDetailPipeline(object):
     def process_item(self, item, spider):
         print item
-
-
-class ProductPricePipeline(object):
-    def process_item(self, item, spider):
-        print '1111:%s' % item

@@ -2,7 +2,7 @@
 import scrapy
 
 
-class ProductDetailItem(scrapy.Item):
+class Product(scrapy.Item):
     productCode = scrapy.Field()  # 商品编码
     state = scrapy.Field()  # 商品状态. 1: 正常; 0: 失效
     chineseName = scrapy.Field()  # 商品中文名称
@@ -13,7 +13,7 @@ class ProductDetailItem(scrapy.Item):
     minPrice = scrapy.Field()  # 历史最低价(不扣减积分)
 
 
-class ProductPriceItem(scrapy.Item):
+class ProductDetailItem(Product):
     productId = scrapy.Field()  # 商品id
     price = scrapy.Field()  # 商品价格
     pointFlag = scrapy.Field()  # 积分标识. 1: 当前享有积分; 0: 当前无积分

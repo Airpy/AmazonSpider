@@ -1,0 +1,6 @@
+# 商品编码,用于横向爬虫使用
+product:
+  - name: DHC医疗唇膏 1.5g
+    code: B000FP358E
+  - name: 城野医生 缩毛孔水 100ml
+    code: B00855VQH8

@@ -63,13 +63,16 @@ def get_product_info():
     """
     root_path = get_root_path()
     product_path = os.path.join(root_path, 'AmazonSpider/static/product/product.yaml')
-    product = get_yaml_info(product_path)
-    return product
+    products = get_yaml_info(product_path)
+    return products
 
 
 def slice_product_code(url):
-    m = re.match(r'.*/dp/(.*)/.*$', url)
-    return m.group(1)
+    m = re.match(r'.*/product/(.*)$', url)
+    if m:
+        return m.group(1)
+    else:
+        raise Exception('未取到商品编码.')
 
 if __name__ == '__main__':
-    print slice_product_code('/%E3%82%B9%E3%82%AD%E3%83%B3%E3%83%99%E3%83%BC%E3%83%97-%E8%99%AB%E3%82%88%E3%81%91%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC-%E3%83%9F%E3%82%B9%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97-%E7%88%BD%E5%BF%AB%E3%82%B7%E3%83%88%E3%83%A9%E3%82%B9%E3%83%9E%E3%83%AA%E3%83%B3%E3%81%AE%E9%A6%99%E3%82%8A-%E7%B4%84666%E3%83%97%E3%83%83%E3%82%B7%E3%83%A5%E5%88%86/dp/B007G2WD28/ref=pd_sim_121_4?_encoding=UTF8&psc=1&refRID=8N0CW0TW86T920H10RVD')
+    print slice_product_code('https://www.amazon.co.jp/gp/product/B00855VQH8')

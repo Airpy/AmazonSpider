@@ -6,11 +6,12 @@ CREATE TABLE t_product
  ,productCode               VARCHAR(32)                                     COMMENT  '商品编码'
  ,state                     TINYINT(4)                                       COMMENT  '商品状态. 1: 正常; 0: 失效'
  ,chineseName               VARCHAR(128)                                    COMMENT  '商品中文名称'
- ,japanName                 VARCHAR(128)                                    COMMENT  '商品日文名称'
+ ,japaneseName                 VARCHAR(128)                                    COMMENT  '商品日文名称'
  ,imgUrl                    VARCHAR(256)                                    COMMENT  '商品图片URL地址'
  ,promotionFlag             TINYINT(4)                                       COMMENT  '促销标识. 1: 当前享有促销; 0: 当前无促销'
  ,seller                    TINYINT(4)                                       COMMENT  '卖家标识. 1: 自营; 2: 第三方货亚马逊销售; 3: 第三方'
  ,minPrice                  DECIMAL(24,2)                                   COMMENT  '历史最低价(不扣减积分)'
+ ,avgPrice                  DECIMAL(24,2)                                   COMMENT  '平均价'
  ,PRIMARY KEY (id)
 );
 

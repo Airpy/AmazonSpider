@@ -93,7 +93,7 @@ def get_urls_list():
 
 
 def slice_product_code(url):
-    m = re.match(r'.*/(gp|dp|product)/(\w+)/.*$', url)
+    m = re.match(r'.*/(dp|product)/(\w+).*$', url)
     if m:
         return m.group(2)
     else:
@@ -101,4 +101,4 @@ def slice_product_code(url):
 
 
 if __name__ == '__main__':
-    print get_product_code()
+    print slice_product_code('https://www.amazon.co.jp/gp/product/B000FP358E')
